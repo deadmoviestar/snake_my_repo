@@ -6,7 +6,7 @@ namespace snake_my
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hell World!");
             Console.ReadLine();
         }
     }
