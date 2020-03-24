@@ -7,17 +7,20 @@ namespace snake_my
     {
         static void Main(string[] args)
         {
-            int x1 = 1;
-            int y1 = 3;
-            char sym1 = '*';
+            point p1 = new point();
+            p1.x = 1;
+            p1.y = 1;
+            p1.sym = '*';
 
-            draw(x1, y1, sym1);
+            p1.draw();
 
-            int x2 = 3;
-            int y2 = 6;
-            char sym2 = '?';
+            point p2 = new point();
 
-            draw(x2, y2, sym2);
+            p2.x = 3;
+            p2.y = 6;
+            p2.sym= '^';
+
+            p2.draw();
 
             Console.ReadLine();
         }
