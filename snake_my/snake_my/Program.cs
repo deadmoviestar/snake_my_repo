@@ -23,6 +23,8 @@ namespace snake_my
 
             point p = new point(4,5,'*');
             p.draw();
+
+            Console.ReadLine();
         }
     }
 }
