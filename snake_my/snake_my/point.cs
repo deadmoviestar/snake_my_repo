@@ -50,6 +50,12 @@ namespace snake_my
             Console.Write(sym);
         }
 
+        public void clear()
+        {
+            sym=' ';
+            draw();
+        }
+
         public override string ToString()
         {
             return x + "," + y + "," + sym;

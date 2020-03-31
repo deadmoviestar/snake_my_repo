@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Threading;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace snake_my
 {
@@ -28,11 +28,17 @@ namespace snake_my
             point head = GetNextPoint();
             plist.Add(head);
 
-            tail.Clear;
-            head.draw;
+            tail.clear();
+            head.draw();
 
         }
 
-        public point GetNextPoint;
+            public point GetNextPoint()
+        {
+            point head = plist.Last();
+            point nextPoint = new point(head);
+            nextPoint.Move(1, direction);
+            return nextPoint;
+        }
     }
 }
