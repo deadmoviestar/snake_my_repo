@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace snake_my
 {
@@ -9,8 +8,9 @@ namespace snake_my
               
     {
         Direction direction;
-        public Snake(point tail, int length, Direction direction)
+        public Snake(point tail, int length, Direction _direction)
         {
+            direction = _direction;
             plist = new List<point>();
             for (int i = 0; i < length; i++)
             {
@@ -21,7 +21,7 @@ namespace snake_my
                 
         }
 
-        internal void Move()
+        public void Move()
         {
             point tail = plist.First();
             plist.Remove(tail);
