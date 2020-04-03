@@ -26,25 +26,19 @@ namespace snake_my
             Snake snake = new Snake(p, 4, Direction.right);
 
             snake.Draw();
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            
-            Console.ReadLine();
+            Console.CursorVisible = false;
+
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.Hanlekey(key.Key);
+                }
+                Thread.Sleep(200);
+                snake.Move();
+            }
+                     
         }
     }
 }

@@ -35,11 +35,11 @@ namespace snake_my
             }
             else if (direction == Direction.up)
             {
-                y = y + offset;
+                y = y - offset;
             }
             else if (direction == Direction.down)
             {
-                y = y - offset;
+                y = y + offset;
             }
         }
         public void draw()

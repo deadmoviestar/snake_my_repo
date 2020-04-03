@@ -40,5 +40,17 @@ namespace snake_my
             nextPoint.Move(1, direction);
             return nextPoint;
         }
+
+        public void Hanlekey(ConsoleKey key)
+        {
+           if (key == ConsoleKey.LeftArrow)
+                direction = Direction.left;
+            else if (key == ConsoleKey.RightArrow)
+                direction = Direction.right;
+            else if (key == ConsoleKey.UpArrow)
+                direction = Direction.up;
+            else if (key == ConsoleKey.DownArrow)
+                direction = Direction.down;
+        }
     }
 }
