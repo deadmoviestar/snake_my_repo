@@ -52,6 +52,16 @@ namespace snake_my
             else if (key == ConsoleKey.DownArrow)
                 direction = Direction.down;
         }
+        internal bool IsHitTail()
+        {
+            var head = plist.Last();
+            for(int i=1; i < plist.Count - 2; i++)
+            {
+                if (head.IsHit(plist[i]))
+                    return true;
+            }
+            return false;
+        }
 
         internal bool Eat(point food)
         {
@@ -59,7 +69,7 @@ namespace snake_my
             if (head.IsHit(food))
             {
                 food.sym = head.sym;
-                plist.Add(food);
+                plist.Add(food);    
                 return true;
             }
             else
